@@ -32,7 +32,7 @@ public class Lives : MonoBehaviour
 
         if (current_lives == 0)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             //End.SetActive(true);
             SceneManager.LoadScene("Ending");
 

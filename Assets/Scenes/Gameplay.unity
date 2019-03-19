@@ -1634,6 +1634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drop: {fileID: 6842490088187699578, guid: 3a12aca1e3d957546bd1496b203d053f, type: 3}
   container: {fileID: 1872797369}
+  clip: {fileID: 8300000, guid: efe842d4b24c9674c99e413daa6e7fb2, type: 3}
   min_speed: 5
   max_speed: 9.5
   change_chance: 0.01

@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
+
+    private AudioSource music;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        music = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -16,9 +19,10 @@ public class Ending : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            music.Stop();
             SceneManager.LoadScene("Gameplay");
           
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             
         }
 

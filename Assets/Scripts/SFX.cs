@@ -9,9 +9,12 @@ public class SFX : MonoBehaviour
     public static AudioClip explosion;
     public static AudioClip hit;
 
+    public static float sfxvol;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
     }
     private void Start()
     {
@@ -24,22 +27,22 @@ public class SFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public static void play_sound(string clip)
     {
         if (clip == "Laser_Shoot36")
         {
-            audio.PlayOneShot(laser);
+            audio.PlayOneShot(laser, sfxvol);
         }
         if (clip == "Explosion41")
         {
-            audio.PlayOneShot(explosion);
+            audio.PlayOneShot(explosion, sfxvol);
         }
         if (clip == "Pickup_Coin")
         {
-            audio.PlayOneShot(hit);
+            audio.PlayOneShot(hit, sfxvol);
         }
     }
 }

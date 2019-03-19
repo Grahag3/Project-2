@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dropper : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Dropper : MonoBehaviour
     //public GameObject Intro;
     public GameObject drop;
     public GameObject container;
+
+    private AudioSource music;
+    public AudioClip clip;
 
     public float min_speed;
     public float max_speed;
@@ -46,6 +50,9 @@ public class Dropper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       music = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
+
+        InvokeRepeating("PlayMusic", 0, 78);
 
         InvokeRepeating("SpawnObject", 2, 2);
 
@@ -107,5 +114,13 @@ public class Dropper : MonoBehaviour
 
         transform.position += direction * speed * Time.deltaTime;
 
+    }
+
+    void PlayMusic()
+    {
+        if (game_started)
+        {
+            music.PlayOneShot(clip);
+        }
     }
 }
