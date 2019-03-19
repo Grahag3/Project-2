@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay.unity
     guid: 2a61834ce13c5d644810e28849b62332
   - enabled: 1
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 07849b5bd8d8b7440920ef37198df950
+  - enabled: 1
+    path: Assets/Scenes/Volume.unity
+    guid: 9e4bfb59ad287e24382e799732f91926
   m_configObjects: {}
