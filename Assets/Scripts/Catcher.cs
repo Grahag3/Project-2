@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Catcher : MonoBehaviour
 {
-    private bool game_started = false;
+    private bool game_started = true;
 
     private float edge = 7.9f;
     private Vector3 direction_right = Vector3.right;
@@ -36,11 +36,12 @@ public class Catcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             game_started = true;
         }
+        */
         if (game_started)
         {
             if (Input.GetKey(KeyCode.D))

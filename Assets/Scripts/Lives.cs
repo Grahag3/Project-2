@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Lives : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Lives : MonoBehaviour
     public int current_lives;
     public int max_lives = 3;
 
-    public GameObject End;
+    //public GameObject End;
 
     private void Awake()
     {
@@ -32,11 +33,10 @@ public class Lives : MonoBehaviour
         if (current_lives == 0)
         {
             Time.timeScale = 0;
-            End.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Time.timeScale = 1;
-            }
+            //End.SetActive(true);
+            SceneManager.LoadScene("Ending");
+
+            
         }
     }
 }

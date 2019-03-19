@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
-    private bool game_started = false;
+    private bool game_started;
 
-    public GameObject Intro;
+    //public GameObject Intro;
     public GameObject drop;
     public GameObject container;
 
@@ -20,12 +20,14 @@ public class Dropper : MonoBehaviour
 
     private Vector3 direction = Vector3.right;
 
-    private float speed;
+    private float speed = 5;
+
+   
 
 
     private void Awake()
     {
-
+        game_started = true;
       
     }
 
@@ -58,12 +60,13 @@ public class Dropper : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             game_started = true;
             Intro.SetActive(false);
 
-        }
+        }*/
     }
 
     void FixedUpdate()
